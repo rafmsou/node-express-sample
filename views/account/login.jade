@@ -1,0 +1,36 @@
+extends ../layout
+
+block title
+    title Login Page
+
+block scripts
+    script(src='/scripts/pages.login.js')
+    
+block content
+    div.container.main-content
+        h1 Login Demo
+        p bla bla bla
+        div
+            form.form-horizontal(action='/account/login', method='POST')
+                fieldset.form-login
+                    legend Existing User Login
+                    |     
+                    div.form-group
+                        label.col-lg-2.control-label(for='username') Email
+                        div.col-lg-10
+                            input#username.form-control(placeholder='Email', type='text', name='username')
+                    div.form-group
+                        label.col-lg-2.control-label(for='password') Password
+                        div.col-lg-10
+                            input#password.form-control(placeholder='Password', type='password', name='password')
+                    div.form-group
+                        div.col-lg-10.col-lg-offset-2
+                            button.btn.btn-default(type='reset') Cancel
+                            button.btn.btn-primary(type='submit') Submit
+        a.new-user(href="/account/signup")
+            |New User
+            
+        if message != ''
+            div.alert.alert-dismissible.alert-danger
+                button.close(type='button', data-dismiss='alert') &times;
+                strong #{message}
