@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - "4"
 script: 
-  - cd public
+  - ./build-test.sh
   - ls -l
   - npm run lint
