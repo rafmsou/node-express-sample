@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/usr/bin/env sh
 cd public
 ls -l
