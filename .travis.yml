@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "4"
-script: 
-  - ./build-test.sh
-  - ls -l
+  - "4"  
+
+install:
+  - npm install eslint@2.4.0 eslint-plugin-import@1.0.4 eslint-plugin-react@4.2.1 -g
+  
+script:
+  - '[ "${TRAVIS_PULL_REQUEST}" != "false" ] && ./utils/travis-scripts/pullrequest.sh'
