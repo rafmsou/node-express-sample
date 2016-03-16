@@ -11,5 +11,5 @@ if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
 fi
 
 if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
-	echo rafael
+	echo rafael2
 fi
