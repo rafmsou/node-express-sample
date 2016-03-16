@@ -4,4 +4,4 @@
 #The -v flag makes the shell print all lines in the script before executing them
 set -ev
 
-npm run lint
+echo rafaels
