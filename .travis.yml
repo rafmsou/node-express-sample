@@ -3,7 +3,11 @@ node_js:
   - "4"  
 
 install:
-  - npm install eslint eslint-plugin-standard eslint-plugin-import eslint-plugin-react -g
+  - npm install eslint &
+    eslint-config-standard &
+    eslint-plugin-standard &
+    eslint-plugin-import &
+    eslint-plugin-react -g
   
 script:
   - ./utils/travis-scripts/pullrequest.sh
