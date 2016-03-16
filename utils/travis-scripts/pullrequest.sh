@@ -4,4 +4,12 @@
 #The -v flag makes the shell print all lines in the script before executing them
 set -ev
 
-echo rafaels
+if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
+	cd public 
+  ls
+  npm run lint
+fi
+
+if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
+	echo rafael
+fi

@@ -6,4 +6,4 @@ install:
   - npm install eslint@2.4.0 eslint-plugin-import@1.0.4 eslint-plugin-react@4.2.1 -g
   
 script:
-  - '[ "${TRAVIS_PULL_REQUEST}" != "false" ] && echo rafael || false'
+  - ./utils/travis-scripts/pullrequest.sh
